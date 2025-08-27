@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow Dark Byte</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0d0d1a; /* Very dark blue */
+            color: #e0e0e0; /* Off-white */
+        }
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        /* Scrollbar Customization */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a1a2e; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #7c3aed; /* Purple */
+            border-radius: 10px;
+            border: 2px solid #1a1a2e;
+        }
+        .link-card {
+            background-color: rgba(26, 26, 46, 0.7);
+            border: 1px solid rgba(124, 58, 237, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px); /* Safari support */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .link-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 0 25px rgba(124, 58, 237, 0.5);
+            border-color: rgba(124, 58, 237, 0.7);
+        }
+        main {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- 3D Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <main class="container mx-auto px-4 py-8 md:py-16">
+
+        <!-- Header Section -->
+        <header class="text-center mb-12">
+            <!-- Replace with your logo URL if you have one -->
+            <img src="https://placehold.co/150x150/0d0d1a/FFFFFF?text=SDB" alt="Shadow Dark Byte Logo" class="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full mb-6 border-4 border-purple-600 shadow-lg shadow-purple-500/20">
+            <h1 class="orbitron text-4xl md:text-6xl font-bold text-white tracking-wider">
+                SHADOW DARK BYTE
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 mt-2">
+                Welcome to my command center. Connect with me below!
+            </p>
+        </header>
+
+        <!-- Social Channels Section -->
+        <section id="channels" class="max-w-2xl mx-auto mb-12">
+            <h2 class="orbitron text-2xl font-bold text-center mb-6 text-purple-400">FOLLOW ME</h2>
+            <div class="grid grid-cols-1 gap-4">
+                <!-- Replace '#' with your channel URLs -->
+                <a href="https://www.youtube.com/channel/UCXqZFVu_bo65acq0ETC_sUw" target="_blank" class="link-card flex items-center p-4 rounded-lg">
+                    <img src="https://placehold.co/40x40/FF0000/FFFFFF?text=YT" class="w-10 h-10 rounded" alt="YouTube Icon">
+                    <span class="font-bold text-lg ml-4 flex-grow">YouTube</span>
+                    <span class="text-purple-400 font-bold">→</span>
+                </a>
+                 <a href="https://www.facebook.com/ShadowDarkByte" target="_blank" class="link-card flex items-center p-4 rounded-lg">
+                    <img src="https://placehold.co/40x40/1877F2/FFFFFF?text=FB" class="w-10 h-10 rounded" alt="Facebook Icon">
+                    <span class="font-bold text-lg ml-4 flex-grow">Facebook</span>
+                    <span class="text-purple-400 font-bold">→</span>
+                </a>
+                <a href="https://www.instagram.com/shadowdarkbyte" target="_blank" class="link-card flex items-center p-4 rounded-lg">
+                    <img src="https://placehold.co/40x40/E4405F/FFFFFF?text=IG" class="w-10 h-10 rounded" alt="Instagram Icon">
+                    <span class="font-bold text-lg ml-4 flex-grow">Instagram</span>
+                    <span class="text-purple-400 font-bold">→</span>
+                </a>
+                <a href="https://www.twitch.tv/shadowdarkbyte" target="_blank" class="link-card flex items-center p-4 rounded-lg">
+                    <img src="https://placehold.co/40x40/9146FF/FFFFFF?text=Tw" class="w-10 h-10 rounded" alt="Twitch Icon">
+                    <span class="font-bold text-lg ml-4 flex-grow">Twitch</span>
+                    <span class="text-purple-400 font-bold">→</span>
+                </a>
+                <a href="https://x.com/ShadowDarkByte" target="_blank" class="link-card flex items-center p-4 rounded-lg">
+                    <img src="https://placehold.co/40x40/000000/FFFFFF?text=X" class="w-10 h-10 rounded" alt="X Icon">
+                    <span class="font-bold text-lg ml-4 flex-grow">X (Twitter)</span>
+                    <span class="text-purple-400 font-bold">→</span>
+                </a>
+                <a href="https://www.tiktok.com/@shadowdarkbyte" target="_blank" class="link-card flex items-center p-4 rounded-lg">
+                    <img src="https://placehold.co/40x40/000000/FFFFFF?text=TT" class="w-10 h-10 rounded" alt="TikTok Icon">
+                    <span class="font-bold text-lg ml-4 flex-grow">TikTok</span>
+                    <span class="text-purple-400 font-bold">→</span>
+                </a>
+                <a href="#" target="_blank" class="link-card flex items-center p-4 rounded-lg">
+                    <img src="https://placehold.co/40x40/5865F2/FFFFFF?text=DC" class="w-10 h-10 rounded" alt="Discord Icon">
+                    <span class="font-bold text-lg ml-4 flex-grow">Discord</span>
+                    <span class="text-purple-400 font-bold">→</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Donations Section -->
+        <section id="donations" class="max-w-2xl mx-auto">
+            <h2 class="orbitron text-2xl font-bold text-center mb-6 text-purple-400">SUPPORT ME</h2>
+            <div class="grid grid-cols-1 gap-4">
+                <!-- Replace '#' with your donation URLs -->
+                <a href="#" target="_blank" class="link-card flex items-center p-4 rounded-lg">
+                    <img src="https://placehold.co/40x40/F6851B/FFFFFF?text=Sw" class="w-10 h-10 rounded" alt="Saweria Icon">
+                    <span class="font-bold text-lg ml-4 flex-grow">Saweria</span>
+                    <span class="text-purple-400 font-bold">→</span>
+                </a>
+                <a href="#" target="_blank" class="link-card flex items-center p-4 rounded-lg">
+                    <img src="https://placehold.co/40x40/1AE67B/FFFFFF?text=SL" class="w-10 h-10 rounded" alt="Streamlabs Icon">
+                    <span class="font-bold text-lg ml-4 flex-grow">Streamlabs</span>
+                    <span class="text-purple-400 font-bold">→</span>
+                </a>
+                <a href="#" target="_blank" class="link-card flex items-center p-4 rounded-lg">
+                    <img src="https://placehold.co/40x40/1a1a2e/FFFFFF?text=$$" class="w-10 h-10 rounded" alt="Donation Icon">
+                    <span class="font-bold text-lg ml-4 flex-grow">Other Donation Platform</span>
+                    <span class="text-purple-400 font-bold">→</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center p-6 mt-12 relative z-10">
+        <p class="text-gray-500">&copy; <span id="year"></span> Shadow Dark Byte. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // 3D Animation Setup
+        let scene, camera, renderer, stars;
+
+        function init() {
+            // Scene
+            scene = new THREE.Scene();
+
+            // Camera
+            camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
+            camera.position.z = 1;
+            camera.rotation.x = Math.PI / 2;
+
+            // Renderer
+            const canvas = document.getElementById('bg-canvas');
+            renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+
+            // Starfield
+            const starGeometry = new THREE.BufferGeometry();
+            const starCount = 5000;
+            const positions = new Float32Array(starCount * 3);
+
+            for (let i = 0; i < starCount; i++) {
+                positions[i * 3] = (Math.random() - 0.5) * 1000;
+                positions[i * 3 + 1] = (Math.random() - 0.5) * 1000;
+                positions[i * 3 + 2] = (Math.random() - 0.5) * 1000;
+            }
+            starGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+            const starMaterial = new THREE.PointsMaterial({
+                color: 0xaaaaaa,
+                size: 0.7
+            });
+
+            stars = new THREE.Points(starGeometry, starMaterial);
+            scene.add(stars);
+
+            animate();
+        }
+
+        // Animation Loop
+        function animate() {
+            // Animate stars
+            stars.rotation.y += 0.0002;
+
+            renderer.render(scene, camera);
+            requestAnimationFrame(animate);
+        }
+
+        // Handle window resize
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        window.addEventListener('resize', onWindowResize, false);
+
+        init();
+    </script>
+
+</body>
+</html>
